@@ -1,36 +1,27 @@
-import React from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Button } from "react-bootstrap";
+import React from "react";
 
-import { Button } from './Button';
 
 export default {
-  title: 'Example/Button',
+  title: "Bootstrap",
   component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-};
+  parameters: { docs: { component: "Button" } },
+} ;
 
-const Template = (args) => <Button {...args} />;
-
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  label: 'Button',
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
+export const _Button = () => (
+  <>
+    <div>
+      <Button variant="primary">Primary</Button> <Button variant="secondary">Secondary</Button>{" "}
+      <Button variant="success">Success</Button> <Button variant="warning">Warning</Button>{" "}
+      <Button variant="danger">Danger</Button> <Button variant="info">Info</Button>{" "}
+      <Button variant="light">Light</Button> <Button variant="dark">Dark</Button> <Button variant="link">Link</Button>
+    </div>
+    <div>
+      <Button variant="outline-primary">Primary</Button> <Button variant="outline-secondary">Secondary</Button>{" "}
+      <Button variant="outline-success">Success</Button> <Button variant="outline-warning">Warning</Button>{" "}
+      <Button variant="outline-danger">Danger</Button> <Button variant="outline-info">Info</Button>{" "}
+      <Button variant="outline-light">Light</Button> <Button variant="outline-dark">Dark</Button>
+    </div>
+  </>
+);
